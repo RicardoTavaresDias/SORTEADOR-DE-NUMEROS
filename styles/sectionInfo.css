@@ -58,7 +58,6 @@ section.info {
   section.info {
     /* border: solid yellow; */
     padding-inline: 35px;
-    margin-inline: auto;
     & div {
       & h3 {
         margin-top: 46px;
