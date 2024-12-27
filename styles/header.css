@@ -1,15 +1,15 @@
 
 header {
-  border: solid red;
+  /* border: solid red; */
   width: 100%;
   margin-top: 76px;
   /* padding-left: 120px; */
 
   & .logo {
+    /* border: solid blue; */
     max-width: 1280px;
     min-width: 375px;
     margin-inline: auto;
-    border: solid blue;
     display: flex;
     align-items: center;
     gap: 11px;

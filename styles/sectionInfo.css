@@ -1,8 +1,6 @@
 
 section.info {
-  /* width: fit-content; */
-  border: solid yellow;
-  
+  /* border: solid yellow; */
   & div {
     & h3 {
       font: var(--overline);
@@ -25,7 +23,7 @@ section.info {
 }
 
 .conteinerMensagem {
-  border: solid red;
+  /* border: solid red; */
   margin-block: 38px 44px;
   & .mensagemPrimary, .mensagemSecondary {
     display: flex;
@@ -58,8 +56,7 @@ section.info {
 /* mobile */
 @media (width < 700px) { 
   section.info {
-    /* width: fit-content; */
-    border: solid yellow;
+    /* border: solid yellow; */
     padding-inline: 35px;
     margin-inline: auto;
     & div {
