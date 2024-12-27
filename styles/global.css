@@ -55,3 +55,26 @@ Dica da borda Linear gradient
 border-image: linear-gradient(to right, #C98CF1 4.16%, #A482EB 48%, #7B78E5 96.76%);
 border-image-slice: 1; 
 */
+body {
+  background-color: var(--background-primary);
+}
+
+main {
+  border: solid pink;
+  max-width: 1280px;
+  min-width: 375px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* mobile */
+@media (width < 700px) {
+  main {
+    flex-direction: column;
+    gap: 42px;
+
+    
+  }
+}
+

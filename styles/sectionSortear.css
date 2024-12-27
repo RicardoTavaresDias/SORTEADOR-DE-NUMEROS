@@ -1,0 +1,14 @@
+
+.sortear {
+  border: solid yellow;
+  height: 300px;
+}
+
+/* mobile */
+@media (width < 700px) {
+  .sortear {
+    border: solid yellow;
+    height: 300px;
+    /* display: none; */
+  }
+}

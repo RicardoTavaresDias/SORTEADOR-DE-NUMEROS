@@ -1,0 +1,37 @@
+
+header {
+  border: solid red;
+  width: 100%;
+  margin-top: 76px;
+  /* padding-left: 120px; */
+
+  & .logo {
+    max-width: 1280px;
+    min-width: 375px;
+    margin-inline: auto;
+    border: solid blue;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    
+  }
+  
+  & span {
+    font: 800 24px/130% "Sora", serif;
+    color: var(--content-primary);
+    text-transform: uppercase;
+  }   
+}
+
+
+
+/* mobile */
+@media (width < 700px) {
+  header {
+    margin-top: 44px;
+    padding: 0;
+   & .logo {
+    justify-content: center;
+    }
+  }
+}
