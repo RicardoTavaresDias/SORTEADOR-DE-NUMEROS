@@ -30,6 +30,10 @@ section.info {
     gap: 8px;
     width: 386px;
 
+    & img {
+      align-self: self-start;
+    }
+
     & div:nth-child(2){
       & span {
         font: var(--paragraph-medium);
