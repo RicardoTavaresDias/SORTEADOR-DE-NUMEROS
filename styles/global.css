@@ -69,6 +69,26 @@ main {
   gap: 108px;
 }
 
+.sortear {
+  display: none;
+}
+
+
+@keyframes bordaButton {
+  0% {
+    background: linear-gradient(0deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+  }25% { 
+    background: linear-gradient(90deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+  } 50% {
+    background: linear-gradient(180deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);  
+  } 75% {
+    background: linear-gradient(270deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+  }100% {
+    background: linear-gradient(360deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+  }
+}
+
+
 /* mobile */
 @media (width < 700px) {
   main {

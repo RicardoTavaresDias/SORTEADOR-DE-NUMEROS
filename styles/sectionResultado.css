@@ -1,0 +1,218 @@
+
+.resultados {
+  /* border: solid yellow; */
+  padding-block: 59px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* display: none; */
+  transform: translateY(50px);
+  animation: conteudo 2s 7s ease forwards;
+  
+  & .colocacao {
+    /* border: solid yellow; */
+    text-align: center;
+
+    & h3 {
+      font: 800 30px/150% "Roboto Flex", serif;
+      color: var(--content-primary);
+      text-transform: uppercase;
+    }
+
+    & span {
+      font: var(--overline);
+      color: var(--content-secondary);
+      text-transform: uppercase;
+    }
+  }
+
+  & article {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin-block: 48px;
+    & .NumeroUM, .NumeroDois {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+      border-radius: 28px;
+      color: var(--content-brand);
+      font: 800 48px/150% "Roboto Mono", serif;
+    }
+
+    & .NumeroUM {
+      opacity: 0;
+      animation: numerosUm 5s ease forwards;
+      & span {
+        animation: numeroSpan 5s ease forwards;
+      }
+    }
+    
+    & .NumeroDois {
+      opacity: 0;
+      animation: numerosDois 5s 3.5s ease forwards;
+      & span {
+        animation: numeroSpan 5s 3.5s ease forwards;
+      }
+    }
+  }
+
+  & .backgroud:hover {
+    background: var(--gradient-border);
+    animation: bordaButton 1.5s infinite linear;
+    border-radius: 8px;
+  }
+
+  & button {
+    width: 482px;
+    height: 56px;
+    border-radius: 8px;
+    background: var(--background-tertiary);
+    color: var(--content-tertiary);
+    font: 700 17px/150% "Roboto Flex", serif;
+    text-transform: uppercase;
+    border: none;
+    margin: 1.6px;
+    opacity: 0;
+    animation: conteudo 2s 7s ease forwards;
+    & img {
+      vertical-align: middle;
+      margin-left: 8px;
+    }
+    &:hover {
+      & img {
+        animation: play 3s ease forwards;
+      }
+    }
+  }
+}
+
+@keyframes numerosUm {
+  0% { 
+    opacity: 1;
+    transform: translateX(20px) scale(0) rotate(0deg);
+    background: var(--content-brand);
+  }20% {
+    opacity: 1;
+    transform: translateX(20px) scale(1.1) rotate(0deg);
+    background: var(--content-brand);
+    color: transparent;
+  } 50%{
+    opacity: 1;
+    transform: translateX(20px) scale(1.1) rotate(360deg);
+    background: var(--content-brand);
+    color: var(--color-inverse);
+  } 60% {
+    opacity: 1;
+    transform: translateX(20px) scale(1.1) rotate(360deg);
+    background: transparent;
+    color: var(--content-brand);
+  }65% {
+    opacity: 1;
+    transform: translateX(20px) scale(1) rotate(360deg);
+    background: transparent;
+    color: var(--content-brand);
+  } 75% {
+    opacity: 1;
+    transform: translateX(0px) scale(1) rotate(360deg);
+    background: transparent;
+    color: var(--content-brand);
+  } 100% {
+    opacity: 1;
+    transform: translateX(0px) scale(1) rotate(360deg);
+    background: transparent;
+    color: var(--content-brand);
+  }
+}
+
+
+@keyframes numerosDois{
+    0% { 
+      opacity: 1;
+      transform: translateX(-10px) scale(0) rotate(0deg);
+      background: var(--content-brand);
+    }20% {
+      opacity: 1;
+      transform: translateX(-10px) scale(1.1) rotate(0deg);
+      background: var(--content-brand);
+      color: transparent;
+    } 50%{
+      opacity: 1;
+      transform: translateX(-10px) scale(1.1) rotate(360deg);
+      background: var(--content-brand);
+      color: var(--color-inverse);
+    } 60% {
+      opacity: 1;
+      transform: translateX(-10px) scale(1.1) rotate(360deg);
+      background: transparent;
+      color: var(--content-brand);
+    }65% {
+      opacity: 1;
+      transform: translateX(-10px) scale(1) rotate(360deg);
+      background: transparent;
+      color: var(--content-brand);
+    } 75% {
+      opacity: 1;
+      transform: translateX(0px) scale(1) rotate(360deg);
+      background: transparent;
+      color: var(--content-brand);
+    } 100% {
+      opacity: 1;
+      transform: translateX(0px) scale(1) rotate(360deg);
+      background: transparent;
+      color: var(--content-brand);
+    }
+}
+
+@keyframes numeroSpan {
+  0% {
+    transform: rotate(360deg);
+  }20%{
+    transform: rotate(360deg);
+  } 50% {
+    transform: rotate(0deg);
+  } 
+}
+
+
+@keyframes conteudo {
+  0% {
+    transform: translateY(50px);
+  } 50% {
+    opacity: 1;
+    transform: translateY(0px);
+  } 100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes play {
+  from {
+    transform: rotate(0deg);
+  } to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* mobile */
+@media (width < 700px) {
+  .resultados {
+    padding-inline: 35px;
+    & .colocacao {  
+      & h3 {
+        font: 800 24px/150% "Roboto Flex", serif;
+      }
+    }
+    .backgroud:hover {
+      width: 319px;
+    }
+    & button {
+      width: 315px;
+      font: 700 14px/150% "Roboto Flex", serif;
+    }
+  }
+}

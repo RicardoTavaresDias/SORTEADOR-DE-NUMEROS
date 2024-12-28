@@ -1,6 +1,6 @@
 
 .sortear {
-  /* border: solid yellow; */
+  border: solid yellow;
   max-width: 482px;
   min-width: 375px;
   & h3 {
@@ -43,6 +43,23 @@ form {
       border: none;
       text-align: center;
     }
+
+    & fieldset:nth-child(1):hover, 
+    fieldset:nth-child(2):hover, 
+    fieldset:nth-child(3):hover{
+      & div:nth-child(2) { 
+        &:hover {
+          background: var(--gradient-border);
+          transition: 5s;
+        }
+        &:active {
+          background: var(--gradient-border);
+        }
+      }
+      & legend {
+        color: var(--content-brand);
+      }
+    }
   
     & legend {
       font: var(--label-medium);
@@ -59,15 +76,7 @@ form {
       justify-content: center;
       align-items: center;
       border: nonoe;
-      padding: 2px;
-      
-      &:hover {
-        animation: bordaButton 1.5s infinite linear;
-      }
-
-      &:active {
-        animation: bordaButton 1.5s infinite linear;
-      }
+      padding: 2px; 
     }
    }
 
@@ -149,21 +158,6 @@ form {
   border: none;
   &:checked {
     background: var(--content-primary);
-  }
-}
-
-
-@keyframes bordaButton {
-  0% {
-    background: linear-gradient(0deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
-  }25% { 
-    background: linear-gradient(90deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
-  } 50% {
-    background: linear-gradient(180deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);  
-  } 75% {
-    background: linear-gradient(270deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
-  }100% {
-    background: linear-gradient(360deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
   }
 }
 
