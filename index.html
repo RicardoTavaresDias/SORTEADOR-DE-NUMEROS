@@ -40,8 +40,8 @@
       <h1>Sorteador <span>de números</span></h1>
     </div>
 
-    <div class="conteinerMensagem descktop">
-      <div class="mensagemPrimary">
+    <div class="conteinerHero descktop">
+      <div class="heroHeader">
 
         <img src="./assets/icon/chat.svg" alt="Chat">
 
@@ -52,7 +52,7 @@
 
       </div>
 
-      <div class="mensagemSecondary">
+      <div class="heroContent">
 
         <img src="./assets/icon/chat.svg" alt="Chat">
 
@@ -65,30 +65,30 @@
     </div>
   </section>
 
-  <section class="sortear">
-    <h3>Quero sortear:</h3>
-    <p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+  <section class="draw">
+    <h3>Quero draw:</h3>
+    <p>defina o intervalo e a quantidade de números, clique em "Sotear" e veja os resultados na tela. É rápido e fácil!</p>
 
     <form>
       <div>
         <fieldset>
           <legend>números</legend>
           <div>
-            <input type="text" id="numero" name="numero" >
+            <input type="text" id="quantityNumber" name="quantityNumber" >
           </div>
         </fieldset>
 
         <fieldset>
           <legend>DE</legend>
           <div>
-            <input type="text" id="dprimary" name="dprimary">
+            <input type="text" id="numberInitial" name="numberInitial">
           </div>
         </fieldset>
 
         <fieldset>
           <legend>DE</legend>
           <div>
-            <input type="text" id="dsecundary" name="dsecundary">
+            <input type="text" id="numberEnd" name="numberEnd">
           </div>
         </fieldset>
         
@@ -96,49 +96,54 @@
 
       <div class="containerTogle">
         <div id="togle" class="togle">
-          <input type="radio" name="togle"  id="direito" class="radioDireito" checked >
-          <input type="radio" name="togle" id="esquerdo"  class="radioEsquerdo"  >
+          <input type="radio" name="togle"  id="togleRight" class="radiotogleRight" checked >
+          <input type="radio" name="togle" id="togleLeft"  class="radiotogleLeft"  >
         </div>
         
         <label>Não repetir número</label>
       </div>
 
-      <div class="backgroud">
+      
         <button type="submit">
-          Sortear
+          sortear
           <img src="./assets/icon/seta.svg" alt="Seta direita">
         </button>
-      </div>
+      
     </form>
   </section>
 
-  <section class="resultados">
+  <section class="results">
     <div class="colocacao">
       <h3>Resultado do sorteio</h3>
       <span>1º resultado</span>
     </div>
 
     <article>
-      <!-- <div class="NumeroUM">
-        <span>23</span>
-      </div>
-      <div class="NumeroDois">
-        <span>12</span>
+
+      <!-- <div class="NumberOne">
+        <div></div>
+        <span>230</span> 
+      </div> 
+
+      <div class="NumberTwo">
+        <div></div>
+        <span>128</span>
       </div> -->
+
     </article>
 
     <div class="backgroud">
-      <button onclick="voltar()">Sortear novamente
+      <button>sortear novamente
         <img src="./assets/icon/play.svg" alt="Icon Play">
       </button>
     </div>
   </section>
 
 
-  <section id="mensagemMobile">
+  <section id="rodapeMobile">
 
-    <div class="conteinerMensagem">
-      <div class="mensagemPrimary">
+    <div class="conteinerHero">
+      <div class="heroHeader">
 
         <img src="./assets/icon/chat.svg" alt="Chat">
 
@@ -149,7 +154,7 @@
 
       </div>
 
-      <div class="mensagemSecondary">
+      <div class="heroContent">
 
         <img src="./assets/icon/chat.svg" alt="Chat">
 
