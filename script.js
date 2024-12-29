@@ -67,6 +67,7 @@ function mostrarResultado(value){
   }
   document.querySelector(".sortear").style.display = "none"
   document.querySelector(".resultados").style.display = "flex"
+  i = 0
 }
 
 
@@ -79,4 +80,6 @@ function voltar() {
   numeros.value = ""
   dprimary.value = ""
   dsecundary.value = ""
+
+  window.location.reload();
 }
