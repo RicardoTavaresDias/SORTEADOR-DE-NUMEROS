@@ -80,5 +80,5 @@ function voltar() {
   dprimary.value = ""
   dsecundary.value = ""
 
-  window.location.reload();
+  // window.location.reload();
 }
