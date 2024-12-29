@@ -1,84 +1,140 @@
+const form = document.querySelector("form")
+const quantityNumbers = document.querySelector("#quantityNumber")
+const numberInitial = document.querySelector("#numberInitial")
+const numberEnd = document.querySelector("#numberEnd")
+
 
 // Evento do botão cor de fundo do togle 
-
-document.querySelector("#esquerdo").addEventListener("change", () => {
+document.querySelector("#togleLeft").addEventListener("change", () => {
   const togle = document.querySelector("#togle")
   togle.style.background = "#D9D9D9"
-  // console.log("esquerdo-cinza")
+  // console.log("togleLeft-cinza")
 })
 
 
-document.querySelector("#direito").addEventListener("change", () => {
+document.querySelector("#togleRight").addEventListener("change", () => {
   const togle = document.querySelector("#togle")
   togle.style.background = "linear-gradient(#D586E0 0%, #91A1FA 98.93%)"
-  // console.log("direito-colorido")
+  // console.log("togleRight-colorido")
 })
 
-
-
-const form = document.querySelector("form")
-const numeros = document.querySelector("#numero")
-const dprimary = document.querySelector("#dprimary")
-const dsecundary = document.querySelector("#dsecundary")
-
+// Evento do formulario e realização do sorteio
 form.addEventListener("submit", (event) => {
   event.preventDefault()
   
-  let quantoNumeros = Number(numeros.value)
-  let numeroMinimo = Number(dprimary.value)
-  let numeroMaximo = Number(dsecundary.value)
+  let quantoquantityNumbers = Number(quantityNumbers.value)
+  let quantityNumberMinimo = Number(numberInitial.value)
+  let quantityNumberMaximo = Number(numberEnd.value)
 
-  let operador = 0
-  let resultado = []
-  for (i=0; i < quantoNumeros; i++) {
+  try {
+    if (campo()) {
+      let operador = 0
+      let resultado = []
 
-     operador = Math.floor(Math.random() * (numeroMaximo - numeroMinimo) + numeroMinimo)
+      for (i=0; i < quantoquantityNumbers; i++) {
 
-    resultado.push(operador)
-  }
-  
-  mostrarResultado(resultado)
+        operador = Math.floor(Math.random() * (quantityNumberMaximo - quantityNumberMinimo) + quantityNumberMinimo)
+        resultado.push(operador)
+      }
+      mostrarResultado(resultado)
+    }
+  } catch (error){
+    alert("ERROR: Não foi possivel coletar os números! Tente outra vez.")
+    console.log(error)
+  } 
 })
 
 
+// Valida entrada do valor digitos
+quantityNumbers.addEventListener("keyup", () => {
+  quantityNumbers.value = quantityNumbers.value.replace(/\D/g,"")
+  
+  if(quantityNumbers.value >= 7) {
+    alert("favor digitar o valor maximo 6 numeros para sortear!")
+    quantityNumbers.value = ""
+  }  
+})
+
+numberInitial.addEventListener("keyup", () => {
+  numberInitial.value = numberInitial.value.replace(/\D/g,"")
+
+  if(numberInitial.value.length >= 4) {
+    alert("favor digitar o maximo 3 digitos!")
+    numberInitial.value = ""
+  }
+})
+
+numberEnd.addEventListener("keyup", () => {
+  numberEnd.value = numberEnd.value.replace(/\D/g,"")
+ 
+  if(numberEnd.value.length >= 4){
+    alert("favor digitar o maximo 3 digitos!")
+    numberEnd.value = ""
+  }
+})
+
+
+// Validar o campo se tem 0 ou vazio
+function campo() {
+  if (Number(quantityNumbers.value) === 0 || Number(numberEnd.value) === 0){
+    alert('Campo números e campo "ATÉ DE" não corresponde!')
+    quantityNumbers.value = ""
+    numberInitial.value = ""
+    numberEnd.value = ""
+    return false
+  } else if (quantityNumbers.value === "" || numberInitial.value === "" || numberEnd.value === ""){
+    alert("Campo vazio, favor digitar um número!")
+    quantityNumbers.value = ""
+    numberInitial.value = ""
+    numberEnd.value = ""
+    return false
+  } else {
+    return true
+  }
+}
+
+// Mostrar os resultados
 function mostrarResultado(value){
 
-  for (i=0; i < value.length; i++){
-    const impar = "NumeroUM"
-    const par = "NumeroDois"
+  try {
+    for (i=0; i < value.length; i++){
+      const impar = "NumberOne"
+      const par = "NumberTwo"
 
-    if((i % 2) === 0) {
+      if((i % 2) === 0) {
 
-      const div = document.createElement("div")
-      const span = document.createElement("span")
-      div.classList = impar
-      div.innerHTML = `<span>${value[i]}</span>`
-      document.querySelector("article").append(div)
-      
-    } else {
-      
-      const div = document.createElement("div")
-      const span = document.createElement("span")
-      div.classList = par
-      div.innerHTML = `<span>${value[i]}</span>`
-      document.querySelector("article").append(div)
+        const div = document.createElement("div")
+        const span = document.createElement("span")
+        div.classList = impar
+        div.innerHTML = `<div></div><span>${value[i]}</span>`
+        document.querySelector("article").append(div)
+        
+      } else {
+        
+        const div = document.createElement("div")
+        const span = document.createElement("span")
+        div.classList = par
+        div.innerHTML = `<div></div><span>${value[i]}</span>`
+        document.querySelector("article").append(div)
 
+      }
     }
-  }
-  document.querySelector(".sortear").style.display = "none"
-  document.querySelector(".resultados").style.display = "flex"
+    document.querySelector(".draw").style.display = "none"
+    document.querySelector(".results").style.display = "flex"
+  } catch (error) {
+    alert("ERROR: Não foi possivel gerar os números! Tente outra vez.")
+    console.log(error)
+  } 
 }
 
+// Evento do botão de retorno
+document.querySelector(".results button").addEventListener("click", () => {
+  document.querySelector(".draw").style.display = "block"
+  document.querySelector(".results").style.display = "none"
 
-
-function voltar() {
-  
-  document.querySelector(".sortear").style.display = "block"
-  document.querySelector(".resultados").style.display = "none"
-
-  numeros.value = ""
-  dprimary.value = ""
-  dsecundary.value = ""
+  quantityNumbers.value = ""
+  numberInitial.value = ""
+  numberEnd.value = ""
 
   window.location.reload();
-}
+})
