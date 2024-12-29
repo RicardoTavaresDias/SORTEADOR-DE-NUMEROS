@@ -22,10 +22,10 @@ section.info {
   }
 }
 
-.conteinerMensagem {
+.conteinerHero {
   /* border: solid red; */
   margin-block: 38px 44px;
-  & .mensagemPrimary, .mensagemSecondary {
+  & .heroHeader, .heroContent {
     display: flex;
     gap: 8px;
     width: 386px;
@@ -47,12 +47,12 @@ section.info {
     } 
   } 
 
-  & .mensagemPrimary {
+  & .heroHeader {
     margin-bottom: 36px;
   }
 }
 
-#mensagemMobile {
+#rodapeMobile {
   display: none;
 }
 
@@ -76,12 +76,12 @@ section.info {
     display: none;
   }
 
-  #mensagemMobile {
+  #rodapeMobile {
     display: block;
   }
 
-  .conteinerMensagem {
-    & .mensagemPrimary, .mensagemSecondary {
+  .conteinerHero {
+    & .heroHeader, .heroContent {
       display: flex;
       gap: 8px;
       width: 375px;
