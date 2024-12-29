@@ -50,11 +50,6 @@
   --label-small: 700 16px/150% "Roboto Flex", serif; 
 }
 
-/* 
-Dica da borda Linear gradient
-border-image: linear-gradient(to right, #C98CF1 4.16%, #A482EB 48%, #7B78E5 96.76%);
-border-image-slice: 1; 
-*/
 body {
   background-color: var(--background-primary);
 }
@@ -70,7 +65,7 @@ main {
 }
 
 .sortear {
-  display: none;
+  /* display: none; */
 }
 
 

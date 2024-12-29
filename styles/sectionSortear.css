@@ -1,6 +1,6 @@
 
 .sortear {
-  border: solid yellow;
+  /* border: solid yellow; */
   max-width: 482px;
   min-width: 375px;
   & h3 {
@@ -132,8 +132,7 @@ form {
   }
 }
 
-/* Botão do togle */
-/* VERIFICAR */
+
 #togle { 
   background: var(--gradient-background);
 }

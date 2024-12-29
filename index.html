@@ -74,21 +74,21 @@
         <fieldset>
           <legend>números</legend>
           <div>
-            <input type="text" placeholder="2">
+            <input type="text" id="numero" name="numero" >
           </div>
         </fieldset>
 
         <fieldset>
           <legend>DE</legend>
           <div>
-            <input type="text" placeholder="1">
+            <input type="text" id="dprimary" name="dprimary">
           </div>
         </fieldset>
 
         <fieldset>
           <legend>DE</legend>
           <div>
-            <input type="text" placeholder="100">
+            <input type="text" id="dsecundary" name="dsecundary">
           </div>
         </fieldset>
         
@@ -96,8 +96,8 @@
 
       <div class="containerTogle">
         <div id="togle" class="togle">
-          <input type="radio" name="togle"  id="direito" class="radioDireito" checked>
-          <input type="radio" name="togle" id="esquerdo"  class="radioEsquerdo" >
+          <input type="radio" name="togle"  id="direito" class="radioDireito" checked >
+          <input type="radio" name="togle" id="esquerdo"  class="radioEsquerdo"  >
         </div>
         
         <label>Não repetir número</label>
@@ -112,7 +112,6 @@
     </form>
   </section>
 
-  <!-- CONTINUAR AQUI -->
   <section class="resultados">
     <div class="colocacao">
       <h3>Resultado do sorteio</h3>
@@ -120,16 +119,16 @@
     </div>
 
     <article>
-      <div class="NumeroUM">
+      <!-- <div class="NumeroUM">
         <span>23</span>
       </div>
       <div class="NumeroDois">
         <span>12</span>
-      </div>
+      </div> -->
     </article>
 
     <div class="backgroud">
-      <button>Sortear novamente
+      <button type="submit" onclick="voltar()">Sortear novamente
         <img src="./assets/icon/play.svg" alt="Icon Play">
       </button>
     </div>
