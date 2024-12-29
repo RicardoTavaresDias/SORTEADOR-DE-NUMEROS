@@ -77,7 +77,7 @@ numberEnd.addEventListener("keyup", () => {
 // Validar o campo se tem 0 ou vazio
 function campo() {
   if (Number(quantityNumbers.value) === 0 || Number(numberEnd.value) === 0){
-    alert('Campo números e campo "ATÉ DE" não corresponde!')
+    alert('Campo deve ser maior que 0!')
     quantityNumbers.value = ""
     numberInitial.value = ""
     numberEnd.value = ""
