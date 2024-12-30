@@ -76,14 +76,14 @@ numberEnd.addEventListener("keyup", () => {
 
 // Validar o campo se tem 0 ou vazio
 function campo() {
-  if (Number(quantityNumbers.value) === 0 || Number(numberEnd.value) === 0){
-    alert('Campo deve ser maior que 0!')
+  if (quantityNumbers.value === "" || numberInitial.value === "" || numberEnd.value === ""){
+    alert("Campo vazio, favor digitar um número!")
     quantityNumbers.value = ""
     numberInitial.value = ""
     numberEnd.value = ""
     return false
-  } else if (quantityNumbers.value === "" || numberInitial.value === "" || numberEnd.value === ""){
-    alert("Campo vazio, favor digitar um número!")
+  } else if (Number(quantityNumbers.value) === 0 || Number(numberEnd.value) === 0){
+    alert('Campo deve ser maior que 0!')
     quantityNumbers.value = ""
     numberInitial.value = ""
     numberEnd.value = ""
