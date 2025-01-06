@@ -247,7 +247,7 @@
 
 
 /* mobile */
-@media (width < 700px) {
+@media (width < 900px) {
   .results {
     padding-inline: 35px;
     & .colocacao {  

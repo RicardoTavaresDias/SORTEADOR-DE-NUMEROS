@@ -184,7 +184,7 @@ form {
 
 
 /* mobile */
-@media (width < 700px) {
+@media (width < 900px) {
   .draw {
     /* border: solid yellow; */
     padding-inline: 28px;

@@ -85,7 +85,7 @@ main {
 
 
 /* mobile */
-@media (width < 700px) {
+@media (width < 900px) {
   main {
     flex-direction: column;
     gap: 42px;

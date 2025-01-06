@@ -58,7 +58,7 @@ section.info {
 
 
 /* mobile */
-@media (width < 700px) { 
+@media (width < 900px) { 
   section.info {
     /* border: solid yellow; */
     padding-inline: 35px;

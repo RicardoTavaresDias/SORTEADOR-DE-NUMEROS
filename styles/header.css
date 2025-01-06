@@ -26,7 +26,7 @@ header {
 
 
 /* mobile */
-@media (width < 700px) {
+@media (width < 900px) {
   header {
     margin-top: 44px;
     padding: 0;
